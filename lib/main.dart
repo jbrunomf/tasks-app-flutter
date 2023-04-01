@@ -27,13 +27,14 @@ class _MyAppState extends State<MyApp> {
         ),
         body: ListView(
           children: const [
-            Task("Teste", "https://www.infoescola.com/wp-content/uploads/2016/08/golfe_235696687-1000x667.jpg"),
-            Task(
-                "Bike", ""),
+            Task("Teste",
+                "https://www.infoescola.com/wp-content/uploads/2016/08/golfe_235696687-1000x667.jpg"),
+            Task("Bike", ""),
             Task("Nadar", ""),
             Task("Nadar", ""),
             Task("Pedalar", ""),
-            Task("Pescar", "https://www.infoescola.com/wp-content/uploads/2016/08/golfe_235696687-1000x667.jpg"),
+            Task("Pescar",
+                "https://www.infoescola.com/wp-content/uploads/2016/08/golfe_235696687-1000x667.jpg"),
           ],
         ),
         floatingActionButton: FloatingActionButton.small(onPressed: () {
@@ -79,18 +80,56 @@ class _TaskState extends State<Task> {
                       color: Colors.black38,
                       width: 72,
                       height: 100,
-                      child: Image.network(widget.urlFoto, fit: BoxFit.cover,),
-                    ),
-                    SizedBox(
-                      width: 200,
-                      child: Text(
-                        widget.nome,
-                        style: const TextStyle(
-                            color: Colors.blueGrey,
-                            fontSize: 24,
-                            fontWeight: FontWeight.w400,
-                            overflow: TextOverflow.ellipsis),
+                      child: Image.network(
+                        widget.urlFoto,
+                        fit: BoxFit.cover,
                       ),
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          width: 200,
+                          child: Text(
+                            widget.nome,
+                            style: const TextStyle(
+                                color: Colors.blueGrey,
+                                fontSize: 24,
+                                fontWeight: FontWeight.w400,
+                                overflow: TextOverflow.ellipsis),
+                          ),
+                        ),
+                        Row(
+                          children: const [
+                            Icon(
+                              Icons.star,
+                              size: 15,
+                              color: Colors.blue,
+                            ),
+                            Icon(
+                              Icons.star,
+                              size: 15,
+                              color: Colors.blue,
+                            ),
+                            Icon(
+                              Icons.star,
+                              size: 15,
+                              color: Colors.blue,
+                            ),
+                            Icon(
+                              Icons.star,
+                              size: 15,
+                              color: Colors.blue,
+                            ),
+                            Icon(
+                              Icons.star,
+                              size: 15,
+                              color: Colors.blue,
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                     SizedBox(
                       height: 52,
@@ -106,7 +145,10 @@ class _TaskState extends State<Task> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: const [
                               Icon(Icons.arrow_drop_up),
-                              Text("Up", style: TextStyle(fontSize: 12),)
+                              Text(
+                                "Up",
+                                style: TextStyle(fontSize: 12),
+                              )
                             ],
                           )),
                     ),
@@ -122,7 +164,7 @@ class _TaskState extends State<Task> {
                       width: 200,
                       child: LinearProgressIndicator(
                         color: Colors.white,
-                        value: nivel/10,
+                        value: nivel / 10,
                       ),
                     ),
                   ),
