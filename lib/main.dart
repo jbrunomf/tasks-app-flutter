@@ -22,6 +22,7 @@ class _MyAppState extends State<MyApp> {
       ),
       home: Scaffold(
         appBar: AppBar(
+          leading: Container(),
           title: const Text("Minhas tarefas"),
         ),
         body: ListView(
@@ -89,13 +90,24 @@ class _TaskState extends State<Task> {
                             overflow: TextOverflow.ellipsis),
                       ),
                     ),
-                    ElevatedButton(
-                        onPressed: () {
-                          setState(() {
-                            nivel++;
-                          });
-                        },
-                        child: const Icon(Icons.arrow_drop_up)),
+                    SizedBox(
+                      height: 52,
+                      width: 52,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            setState(() {
+                              nivel++;
+                            });
+                          },
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: const [
+                              Icon(Icons.arrow_drop_up),
+                              Text("Up", style: TextStyle(fontSize: 12),)
+                            ],
+                          )),
+                    ),
                   ],
                 ),
               ),
