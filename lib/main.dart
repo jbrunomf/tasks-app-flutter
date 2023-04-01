@@ -27,7 +27,7 @@ class _MyAppState extends State<MyApp> {
         body: ListView(
           children: [
             Task("Teste"),
-            Task("Andar de bike"),
+            Task("Andar de bike durante  a tarde toda sozinho teste tamanho do container de nome"),
             Task("Nadar"),
             Task("Nadar"),
             Task("Pedalar"),
@@ -69,12 +69,16 @@ class Task extends StatelessWidget {
                     width: 72,
                     height: 100,
                   ),
-                  Text(
-                    this.nome,
-                    style: TextStyle(
-                        color: Colors.blueGrey,
-                        fontSize: 24,
-                        fontWeight: FontWeight.w400),
+                  Container(
+                    width: 200,
+                    child: Text(
+                      this.nome,
+                      style: TextStyle(
+                          color: Colors.blueGrey,
+                          fontSize: 24,
+                          fontWeight: FontWeight.w400,
+                      overflow: TextOverflow.ellipsis),
+                    ),
                   ),
                   ElevatedButton(
                       onPressed: () {}, child: const Icon(Icons.arrow_drop_up)),
