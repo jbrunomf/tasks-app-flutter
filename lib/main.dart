@@ -26,14 +26,14 @@ class _MyAppState extends State<MyApp> {
           title: const Text("Minhas tarefas"),
         ),
         body: ListView(
-          children: [
-            Task("Teste"),
+          children: const [
+            Task("Teste", "https://www.infoescola.com/wp-content/uploads/2016/08/golfe_235696687-1000x667.jpg"),
             Task(
-                "Andar de bike durante  a tarde toda sozinho teste tamanho do container de nome"),
-            Task("Nadar"),
-            Task("Nadar"),
-            Task("Pedalar"),
-            Task("Pescar"),
+                "Bike", ""),
+            Task("Nadar", ""),
+            Task("Nadar", ""),
+            Task("Pedalar", ""),
+            Task("Pescar", "https://www.infoescola.com/wp-content/uploads/2016/08/golfe_235696687-1000x667.jpg"),
           ],
         ),
         floatingActionButton: FloatingActionButton.small(onPressed: () {
@@ -46,8 +46,9 @@ class _MyAppState extends State<MyApp> {
 
 class Task extends StatefulWidget {
   final String nome;
+  final String urlFoto;
 
-  const Task(this.nome, {Key? key}) : super(key: key);
+  const Task(this.nome, this.urlFoto, {Key? key}) : super(key: key);
 
   @override
   State<Task> createState() => _TaskState();
@@ -78,6 +79,7 @@ class _TaskState extends State<Task> {
                       color: Colors.black38,
                       width: 72,
                       height: 100,
+                      child: Image.network(widget.urlFoto, fit: BoxFit.cover,),
                     ),
                     SizedBox(
                       width: 200,
