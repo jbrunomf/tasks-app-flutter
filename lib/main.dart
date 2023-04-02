@@ -33,25 +33,30 @@ class _MyAppState extends State<MyApp> {
           duration: const Duration(milliseconds: 2000),
           child: ListView(
             children: const [
-              Task("Teste",
-                  "https://www.infoescola.com/wp-content/uploads/2016/08/golfe_235696687-1000x667.jpg", 1),
+              Task(
+                  "Teste",
+                  "https://www.infoescola.com/wp-content/uploads/2016/08/golfe_235696687-1000x667.jpg",
+                  1),
               Task("Bike", "", 2),
               Task("Nadar", "", 3),
               Task("Nadar", "", 4),
               Task("Pedalar", "", 5),
-              Task("Pescar",
-                  "https://www.infoescola.com/wp-content/uploads/2016/08/golfe_235696687-1000x667.jpg", 5),
+              Task(
+                  "Pescar",
+                  "https://www.infoescola.com/wp-content/uploads/2016/08/golfe_235696687-1000x667.jpg",
+                  5),
             ],
           ),
         ),
-        floatingActionButton: FloatingActionButton.small(onPressed: () {
-          setState(() {
-            isVisible = !isVisible;
-          });
-        },
-        child: const Icon(Icons.remove_red_eye),),
+        floatingActionButton: FloatingActionButton.small(
+          onPressed: () {
+            setState(() {
+              isVisible = !isVisible;
+            });
+          },
+          child: const Icon(Icons.remove_red_eye),
+        ),
       ),
     );
   }
 }
-
