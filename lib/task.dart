@@ -130,10 +130,10 @@ class _TaskState extends State<Task> {
 }
 
 class Difficulty extends StatelessWidget {
-  final int dificuldade;
+  final int dificultylevel;
 
   const Difficulty(
-    this.dificuldade, {
+    this.dificultylevel, {
     super.key,
   });
 
@@ -144,27 +144,27 @@ class Difficulty extends StatelessWidget {
         Icon(
           Icons.star,
           size: 15,
-          color: dificuldade >= 1 ? Colors.blue : Colors.blue[100],
+          color: dificultylevel >= 1 ? Colors.blue : Colors.blue[100],
         ),
         Icon(
           Icons.star,
           size: 15,
-          color: dificuldade >= 2 ? Colors.blue : Colors.blue[100],
+          color: dificultylevel >= 2 ? Colors.blue : Colors.blue[100],
         ),
         Icon(
           Icons.star,
           size: 15,
-          color: dificuldade >= 3 ? Colors.blue : Colors.blue[100],
+          color: dificultylevel >= 3 ? Colors.blue : Colors.blue[100],
         ),
         Icon(
           Icons.star,
           size: 15,
-          color: dificuldade >= 4 ? Colors.blue : Colors.blue[100],
+          color: dificultylevel >= 4 ? Colors.blue : Colors.blue[100],
         ),
         Icon(
           Icons.star,
           size: 15,
-          color: dificuldade >= 5 ? Colors.blue : Colors.blue[100],
+          color: dificultylevel >= 5 ? Colors.blue : Colors.blue[100],
         ),
       ],
     );
