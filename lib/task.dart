@@ -22,7 +22,7 @@ class _TaskState extends State<Task> {
       child: Stack(
         children: [
           Container(
-            // color: Colors.blue,
+            color: Colors.blue,
             height: 150,
           ),
           Column(
@@ -104,7 +104,7 @@ class _TaskState extends State<Task> {
                     child: Container(
                       width: 200,
                       child: LinearProgressIndicator(
-                        color: Colors.white,
+                        color: Colors.white54,
                         value: nivel / 10,
                       ),
                     ),
