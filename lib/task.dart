@@ -69,7 +69,7 @@ class _TaskState extends State<Task> {
                                 overflow: TextOverflow.ellipsis),
                           ),
                         ),
-                        Difficulty(widget.dificuldade),
+                        Difficulty(dificultylevel: widget.dificuldade),
                       ],
                     ),
                     SizedBox(
@@ -132,8 +132,8 @@ class _TaskState extends State<Task> {
 class Difficulty extends StatelessWidget {
   final int dificultylevel;
 
-  const Difficulty(
-    this.dificultylevel, {
+  const Difficulty({
+    required this.dificultylevel,
     super.key,
   });
 
