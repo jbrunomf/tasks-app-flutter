@@ -28,13 +28,13 @@ class _MyAppState extends State<MyApp> {
         body: ListView(
           children: const [
             Task("Teste",
-                "https://www.infoescola.com/wp-content/uploads/2016/08/golfe_235696687-1000x667.jpg"),
-            Task("Bike", ""),
-            Task("Nadar", ""),
-            Task("Nadar", ""),
-            Task("Pedalar", ""),
+                "https://www.infoescola.com/wp-content/uploads/2016/08/golfe_235696687-1000x667.jpg", 1),
+            Task("Bike", "", 2),
+            Task("Nadar", "", 3),
+            Task("Nadar", "", 4),
+            Task("Pedalar", "", 5),
             Task("Pescar",
-                "https://www.infoescola.com/wp-content/uploads/2016/08/golfe_235696687-1000x667.jpg"),
+                "https://www.infoescola.com/wp-content/uploads/2016/08/golfe_235696687-1000x667.jpg", 5),
           ],
         ),
         floatingActionButton: FloatingActionButton.small(onPressed: () {
@@ -48,8 +48,9 @@ class _MyAppState extends State<MyApp> {
 class Task extends StatefulWidget {
   final String nome;
   final String urlFoto;
+  final int dificuldade;
 
-  const Task(this.nome, this.urlFoto, {Key? key}) : super(key: key);
+  const Task(this.nome, this.urlFoto, this.dificuldade, {Key? key}) : super(key: key);
 
   @override
   State<Task> createState() => _TaskState();
@@ -101,31 +102,31 @@ class _TaskState extends State<Task> {
                           ),
                         ),
                         Row(
-                          children: const [
+                          children: [
                             Icon(
                               Icons.star,
                               size: 15,
-                              color: Colors.blue,
+                              color: widget.dificuldade >= 1 ? Colors.blue : Colors.blue[100],
                             ),
                             Icon(
                               Icons.star,
                               size: 15,
-                              color: Colors.blue,
+                              color: widget.dificuldade >= 2 ? Colors.blue : Colors.blue[100],
                             ),
                             Icon(
                               Icons.star,
                               size: 15,
-                              color: Colors.blue,
+                              color: widget.dificuldade >= 3 ? Colors.blue : Colors.blue[100],
                             ),
                             Icon(
                               Icons.star,
                               size: 15,
-                              color: Colors.blue,
+                              color: widget.dificuldade >= 4 ? Colors.blue : Colors.blue[100],
                             ),
                             Icon(
                               Icons.star,
                               size: 15,
-                              color: Colors.blue,
+                              color: widget.dificuldade >= 5 ? Colors.blue : Colors.blue[100],
                             ),
                           ],
                         ),
