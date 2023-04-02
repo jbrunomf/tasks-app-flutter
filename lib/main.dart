@@ -1,5 +1,4 @@
 import 'package:app_flutter/initial_screen.dart';
-import 'package:app_flutter/task.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +13,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
