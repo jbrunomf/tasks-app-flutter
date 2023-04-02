@@ -5,7 +5,8 @@ class Task extends StatefulWidget {
   final String urlFoto;
   final int dificuldade;
 
-  const Task(this.nome, this.urlFoto, this.dificuldade, {Key? key}) : super(key: key);
+  const Task(this.nome, this.urlFoto, this.dificuldade, {Key? key})
+      : super(key: key);
 
   @override
   State<Task> createState() => _TaskState();
@@ -68,35 +69,7 @@ class _TaskState extends State<Task> {
                                 overflow: TextOverflow.ellipsis),
                           ),
                         ),
-                        Row(
-                          children: [
-                            Icon(
-                              Icons.star,
-                              size: 15,
-                              color: widget.dificuldade >= 1 ? Colors.blue : Colors.blue[100],
-                            ),
-                            Icon(
-                              Icons.star,
-                              size: 15,
-                              color: widget.dificuldade >= 2 ? Colors.blue : Colors.blue[100],
-                            ),
-                            Icon(
-                              Icons.star,
-                              size: 15,
-                              color: widget.dificuldade >= 3 ? Colors.blue : Colors.blue[100],
-                            ),
-                            Icon(
-                              Icons.star,
-                              size: 15,
-                              color: widget.dificuldade >= 4 ? Colors.blue : Colors.blue[100],
-                            ),
-                            Icon(
-                              Icons.star,
-                              size: 15,
-                              color: widget.dificuldade >= 5 ? Colors.blue : Colors.blue[100],
-                            ),
-                          ],
-                        ),
+                        Dificulty(widget.dificuldade),
                       ],
                     ),
                     SizedBox(
@@ -152,6 +125,48 @@ class _TaskState extends State<Task> {
           ),
         ],
       ),
+    );
+  }
+}
+
+class Dificulty extends StatelessWidget {
+  int dificuldade;
+
+  Dificulty(
+    this.dificuldade, {
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Icon(
+          Icons.star,
+          size: 15,
+          color: dificuldade >= 1 ? Colors.blue : Colors.blue[100],
+        ),
+        Icon(
+          Icons.star,
+          size: 15,
+          color: dificuldade >= 2 ? Colors.blue : Colors.blue[100],
+        ),
+        Icon(
+          Icons.star,
+          size: 15,
+          color: dificuldade >= 3 ? Colors.blue : Colors.blue[100],
+        ),
+        Icon(
+          Icons.star,
+          size: 15,
+          color: dificuldade >= 4 ? Colors.blue : Colors.blue[100],
+        ),
+        Icon(
+          Icons.star,
+          size: 15,
+          color: dificuldade >= 5 ? Colors.blue : Colors.blue[100],
+        ),
+      ],
     );
   }
 }
