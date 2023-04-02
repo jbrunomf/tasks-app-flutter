@@ -13,7 +13,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  bool visivel = true;
+  bool isVisible = true;
 
   // This widget is the root of your application.
   @override
@@ -29,7 +29,7 @@ class _MyAppState extends State<MyApp> {
           title: const Text("Minhas tarefas"),
         ),
         body: AnimatedOpacity(
-          opacity: visivel ? 1 : 0,
+          opacity: isVisible ? 1 : 0,
           duration: const Duration(milliseconds: 2000),
           child: ListView(
             children: const [
@@ -46,7 +46,7 @@ class _MyAppState extends State<MyApp> {
         ),
         floatingActionButton: FloatingActionButton.small(onPressed: () {
           setState(() {
-            visivel = !visivel;
+            isVisible = !isVisible;
           });
         },
         child: const Icon(Icons.remove_red_eye),),
