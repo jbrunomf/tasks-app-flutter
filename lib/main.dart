@@ -37,10 +37,22 @@ class _MyAppState extends State<MyApp> {
                   "Teste",
                   "https://www.infoescola.com/wp-content/uploads/2016/08/golfe_235696687-1000x667.jpg",
                   1),
-              Task("Bike", "", 2),
-              Task("Nadar", "", 3),
-              Task("Nadar", "", 4),
-              Task("Pedalar", "", 5),
+              Task(
+                  "Bike",
+                  "https://www.infoescola.com/wp-content/uploads/2016/08/golfe_235696687-1000x667.jpg",
+                  2),
+              Task(
+                  "Nadar",
+                  "https://www.infoescola.com/wp-content/uploads/2016/08/golfe_235696687-1000x667.jpg",
+                  3),
+              Task(
+                  "Nadar",
+                  "https://www.infoescola.com/wp-content/uploads/2016/08/golfe_235696687-1000x667.jpg",
+                  4),
+              Task(
+                  "Pedalar",
+                  "https://www.infoescola.com/wp-content/uploads/2016/08/golfe_235696687-1000x667.jpg",
+                  5),
               Task(
                   "Pescar",
                   "https://www.infoescola.com/wp-content/uploads/2016/08/golfe_235696687-1000x667.jpg",
