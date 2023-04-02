@@ -103,7 +103,7 @@ class _TaskState extends State<Task> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Container(
+                    child: SizedBox(
                       width: 200,
                       child: LinearProgressIndicator(
                         color: Colors.white54,
