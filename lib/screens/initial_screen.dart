@@ -24,29 +24,28 @@ class _InitialScreenState extends State<InitialScreen> {
         child: ListView(
           children: const [
             Task(
-                "Teste",
-                "https://www.infoescola.com/wp-content/uploads/2016/08/golfe_235696687-1000x667.jpg",
+                "Bike",
+                "assets/images/bike.webp",
                 1),
             Task(
-                "Bike",
-                "https://www.infoescola.com/wp-content/uploads/2016/08/golfe_235696687-1000x667.jpg",
+                "Dash",
+                "assets/images/dash.png",
                 2),
             Task(
-                "Nadar",
-                "https://www.infoescola.com/wp-content/uploads/2016/08/golfe_235696687-1000x667.jpg",
+                "Jogar",
+                "assets/images/jogar.jpg",
                 3),
             Task(
-                "Nadar",
-                "https://www.infoescola.com/wp-content/uploads/2016/08/golfe_235696687-1000x667.jpg",
+                "Ler",
+                "assets/images/livro.jpg",
                 4),
             Task(
-                "Pedalar",
-                "https://www.infoescola.com/wp-content/uploads/2016/08/golfe_235696687-1000x667.jpg",
+                "Meditar",
+                "assets/images/meditar.jpeg",
                 5),
-            Task(
-                "Pescar",
-                "https://www.infoescola.com/wp-content/uploads/2016/08/golfe_235696687-1000x667.jpg",
-                5),
+            SizedBox(
+              height: 80,
+            )
           ],
         ),
       ),
